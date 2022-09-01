@@ -23,10 +23,10 @@ def PS5_bot():
  options=webdriver.ChromeOptions()
 
  options.add_argument("--start-maximized")
- options.add_argument("--user-data-dir=C:\\Users\\emilb\\Desktop\\Python_projekte\\BOTS\\Chrome_Profile\\GoogleChromeProfile2");
+ options.add_argument("--user-data-dir=C:\\GoogleChromeProfile2");
  options.add_argument("--profile-directory=Profile2");
 
- chrome_browser=uc.Chrome(executable_path=r'C:\Users\emilb\Desktop\Python_projekte\BOTS\driver\chromedriver.exe',options=options)
+ chrome_browser=uc.Chrome(executable_path=r'C:chromedriver.exe',options=options)
 
 
  try:
