@@ -1,4 +1,8 @@
 # Amazon_PS5_Bot
 
 Update!
-You must first log in to Chrome and specify the profile path for the chromeprofile
+Download Chrome, open chrome and sign in to Amazon!
+
+Do not use multiple profiles.
+
+Then start the script!
