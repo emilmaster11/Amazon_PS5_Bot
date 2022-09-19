@@ -38,8 +38,14 @@ class AmazonBot():
         driver = self.driver
     
  
-        shopping_cart_button = driver.find_element(By.XPATH, '//*[@id="submit.add-to-cart"]//*')
-        shopping_cart_button.click()
+        while True:
+         try:
+          shopping_cart_button = driver.find_element(By.XPATH, '//*[@id="submit.add-to-cart"]//*')
+          shopping_cart_button.click()
+          break
+
+         except:
+            driver.refresh() 
 
     
         try:
