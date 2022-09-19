@@ -17,7 +17,7 @@ class AmazonBot():
         self.options = options
 
         self.profile = profile
-        options.add_argument("--user-data-dir=C:\\Users\\emilb\\Desktop\\Python_projekte\\BOTS\\Chrome_Profile\\"+str(profile))
+        options.add_argument("--user-data-dir=YOU HAVE TO PUT HERE THE CHROME PROFILE PATH"+str(profile))
         
         self.directory = directory
         options.add_argument("--profile-directory="+str(directory))
