@@ -43,17 +43,17 @@ class AmazonBot():
 
     
         try:
-            insurance_button = WebDriverWait(driver,5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="attachSiNoCoverage"]/span/input')))
+            insurance_button = WebDriverWait(driver,3).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="attachSiNoCoverage"]/span/input')))
             insurance_button.click()
             
-            go_to_checkout_button = WebDriverWait(driver,5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="attach-sidesheet-checkout-button"]/span/input')))
+            go_to_checkout_button = WebDriverWait(driver,3).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="attach-sidesheet-checkout-button"]/span/input')))
             go_to_checkout_button.click()
             
             return
 
         except:pass
      
-        go_to_checkout_button2 = WebDriverWait(driver,5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="sc-buy-box-ptc-button"]/span/input'))) 
+        go_to_checkout_button2 = WebDriverWait(driver,3).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="sc-buy-box-ptc-button"]/span/input'))) 
         go_to_checkout_button2.click()
 
 
