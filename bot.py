@@ -1,6 +1,5 @@
+import os
 import time
-import random
-from random import randint 
 from selenium import webdriver
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
@@ -12,16 +11,15 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class AmazonBot():
 
-    def __init__(self,profile,directory,user_agent):
+    def __init__(self,user_agent):
         options=webdriver.ChromeOptions()
         self.options = options
 
-        self.profile = profile
-        options.add_argument("--user-data-dir=YOU HAVE TO PUT HERE THE CHROME PROFILE PATH"+str(profile))
         
-        self.directory = directory
-        options.add_argument("--profile-directory="+str(directory))
-
+        options.add_argument("--user-data-dir="+os.path.expanduser("~\\AppData\\Local\\Google\\Chrome\\User Data"))         
+        options.add_argument("--profile-directory=Default")    
+        
+        self.user_agent = user_agent
 
         options.add_argument("user-agent="+user_agent)    
    
@@ -50,6 +48,7 @@ class AmazonBot():
             
             go_to_checkout_button = WebDriverWait(driver,5).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="attach-sidesheet-checkout-button"]/span/input')))
             go_to_checkout_button.click()
+            
             return
 
         except:pass
@@ -65,6 +64,18 @@ class AmazonBot():
         buy_now_button.click()
         
         time.wait(100)
+
+
+
+
+
+
+
+
+
+
+
+        
 
 
 
